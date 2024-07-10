@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: #171716d6;
+    background-color: hsla(210, 3.2%, 87.8%, 1);
+}
+
+div, nav, ul, footer, main, aside, section, body, h1, li {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    min-height: 20vh;
+}
+
+.header-container {
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+}
+
+.header-nav, h1, .div-logos {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.header-nav li {
+    font-size: 15px;
+}
+
+.header-nav a {
+    text-decoration: none;
+    color: #171716d6;
+    text-decoration:underline;
+}
+
+.div-logos {
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+.div-logos img {
+    width: 30px;
+    height: auto;
+}
+
+.main {
+    min-height: 70vh;
+    background-color: hsla(210, 3.2%, 87.8%, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.titulo-2 {
+    width: 90%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.container-grid {
+    display: grid;
+    grid-template-columns: 600px 600px;
+    grid-template-rows: repeat(3, 400px);
+    gap: 20px;
+    padding: 20px;
+}
+
+.container-grid img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container-grid img:hover {
+    opacity: 0.8;
+}
+
+.footer {
+    min-height: 10vh;
+    background-color: rgb(9, 9, 9);
+    color: white;
+}
+
+.footer p {
+    text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .header-nav li {
+        padding: 20px;
+    }
+
+    .titulo-2 {
+        width: 60%;
+        text-align: center;
+    }
+
+    .container-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+}
